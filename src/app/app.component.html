@@ -1,10 +1,17 @@
-<div style="text-align:center">
-  <h1>
+<div style="text-align: center">
+  <h1
+    [style.font-size.%]="helloComponent.namesList.length > 0 ? 200 : 150"
+    [style.color]="helloComponent.namesList.length > 0 ? 'red' : 'black'"
+  >
     Let's learn Angular
   </h1>
   <div [class.hidden]="helloComponent.inputName.length == 0">
-    Writting '{{helloComponent.inputName}}' in HelloComponent
+    Writting '{{ helloComponent.inputName }}' in HelloComponent
   </div>
-  <br>
-  <custom-hello #helloComponent [name]="myName" (sayHello)="onSayHello($event)"></custom-hello>
+  <br />
+  <custom-hello
+    #helloComponent
+    [name]="myName"
+    (sayHello)="onSayHello($event)"
+  ></custom-hello>
 </div>
