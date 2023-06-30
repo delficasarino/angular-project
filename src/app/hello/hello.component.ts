@@ -1,10 +1,14 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-    selector: 'custom-hello',
-    templateUrl: './hello.component.html',
-    styleUrls: ['./hello.component.css']
+  selector: "custom-hello",
+  templateUrl: "./hello.component.html",
+  styleUrls: ["./hello.component.css"],
 })
-export class HelloComponent{
+export class HelloComponent {
+  public name: string;
 
+  constructor() {
+    this.name = "Delfina";
+  }
 }
