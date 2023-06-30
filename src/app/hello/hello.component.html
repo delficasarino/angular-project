@@ -1,3 +1,5 @@
-<p (click)="onClick()">
-    Hello {{name}}!
-</p>
+<div>
+  <input type="text" [value]="inputName" (keyup)="updateInputName($event)" />
+  <button (click)="addName()">Add Name</button>
+</div>
+<p (click)="onClick()">Hello {{ name }}!</p>
